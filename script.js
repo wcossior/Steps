@@ -10,7 +10,7 @@ function nextStep() {
         nextActiveCircle++;
         btnPrev.removeAttribute('disabled');
         circles[nextActiveCircle].classList.add('active');
-        percentage = percentage + 33;
+        percentage = percentage + 100/(circles.length-1);
         progressLine.style.width = `${percentage}%`;
     }
     if (nextActiveCircle === circles.length - 1) {
@@ -22,7 +22,7 @@ function prevStep() {
     if (nextActiveCircle > 0) {
         btnNext.removeAttribute('disabled');
         circles[nextActiveCircle].classList.remove('active');
-        percentage = percentage - 33;
+        percentage = percentage - 100/(circles.length-1);
         progressLine.style.width = `${percentage}%`;
         nextActiveCircle--;
     }
