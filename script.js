@@ -11,7 +11,7 @@ function nextStep() {
         btnPrev.removeAttribute('disabled');
         circles[nextActiveCircle].classList.add('active');
         percentage = percentage + 33;
-        progressLine.style.background = `linear-gradient(to right, #3498db ${percentage}%, #e0e0e0 ${percentage}%, #e0e0e0 100%)`;
+        progressLine.style.width = `${percentage}%`;
     }
     if (nextActiveCircle === circles.length - 1) {
         btnNext.setAttribute('disabled', 'true');
@@ -23,7 +23,7 @@ function prevStep() {
         btnNext.removeAttribute('disabled');
         circles[nextActiveCircle].classList.remove('active');
         percentage = percentage - 33;
-        progressLine.style.background = `linear-gradient(to right, #3498db ${percentage}%, #e0e0e0 ${percentage}%, #e0e0e0 100%)`;
+        progressLine.style.width = `${percentage}%`;
         nextActiveCircle--;
     }
     if (nextActiveCircle === 0) {
