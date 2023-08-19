@@ -49,7 +49,7 @@ body {
     border-radius: 100px;
     z-index: 1;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     transition: all 0.8s ease;
 }
 
@@ -60,7 +60,6 @@ body {
 .circle span {
     color: #999;
     font-size: 16px;
-
 }
 
 button {
